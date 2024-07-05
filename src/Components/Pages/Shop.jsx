@@ -1,12 +1,14 @@
 import React from "react";
-import Hero from "../Hero/Hero";
-import Popular from "../Popular/Popular";
+import Hero from "../Hero.jsx";
+import Popular from "../Popular.jsx";
+import Category from "../Category.jsx";
 
 const Shop = () => {
   return (
     <div>
       <Hero />
       <Popular />
+      <Category />
     </div>
   );
 };

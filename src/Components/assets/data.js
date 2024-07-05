@@ -1,30 +1,673 @@
-import p1_img from "./product_1.png";
-import p2_img from "./product_2.png";
-import p3_img from "./product_3.png";
-import p4_img from "./product_4.png";
+import w1_img from "/Women/1.webp";
+import w2_img from "/Women/2.jpg";
+import w3_img from "/Women/3.jpg";
+import w4_img from "/Women/4.jpg";
+import w5_img from "/Women/5.jpg";
+import w6_img from "/Women/6.jpg";
+import w7_img from "/Women/7.jpg";
+import w8_img from "/Women/8.jpg";
+import w9_img from "/Women/9.webp";
+import w10_img from "/Women/10.jpg";
+import w11_img from "/Women/11.webp";
+import w12_img from "/Women/12.webp";
+import w13_img from "/Women/13.jpg";
+import w14_img from "/Women/14.webp";
+import w15_img from "/Women/15.jpg";
+import w16_img from "/Women/16.jpg";
+import w17_img from "/Women/17.jpg";
+import w18_img from "/Women/18.jpg";
+import w19_img from "/Women/19.jpg";
+import w20_img from "/Women/20.webp";
 
-let data_product = [
+import m1_img from "/Men/1.jpg";
+import m2_img from "/Men/2.webp";
+import m3_img from "/Men/3.jpg";
+import m4_img from "/Men/4.jpg";
+import m5_img from "/Men/5.jpg";
+import m6_img from "/Men/6.webp";
+import m7_img from "/Men/7.jpg";
+import m8_img from "/Men/8.webp";
+import m9_img from "/Men/9.webp";
+import m10_img from "/Men/10.webp";
+import m11_img from "/Men/11.webp";
+import m12_img from "/Men/12.webp";
+import m13_img from "/Men/13.jpg";
+import m14_img from "/Men/14.jpg";
+import m15_img from "/Men/15.jpg";
+import m16_img from "/Men/16.webp";
+import m17_img from "/Men/17.webp";
+import m18_img from "/Men/18.jpg";
+import m19_img from "/Men/19.jpg";
+import m20_img from "/Men/20.webp";
+
+import k1_img from "/Kid/1.webp";
+import k2_img from "/Kid/2.webp";
+import k3_img from "/Kid/3.webp";
+import k4_img from "/Kid/4.jpg";
+import k5_img from "/Kid/5.webp";
+import k6_img from "/Kid/6.webp";
+import k7_img from "/Kid/7.webp";
+import k8_img from "/Kid/8.webp";
+import k9_img from "/Kid/9.webp";
+import k10_img from "/Kid/10.jpg";
+import k11_img from "/Kid/11.webp";
+import k12_img from "/Kid/12.webp";
+import k13_img from "/Kid/13.jpg";
+import k14_img from "/Kid/14.webp";
+import k15_img from "/Kid/15.webp";
+import k16_img from "/Kid/16.jpg";
+import k17_img from "/Kid/17.webp";
+import k18_img from "/Kid/18.jpg";
+import k19_img from "/Kid/19.webp";
+import k20_img from "/Kid/20.webp";
+
+let data_product_women = [
   {
     id: 1,
-    name: "NIKE Running Shoes , Red , White Sole",
-    image: p1_img,
-    new_price: 5000.0,
-    old_price: 7000.0,
+    name: "NIKE Running Shoes",
+    category: "Women",
+    image: w1_img,
+    new_price: 26.23,
+    old_price: 27.54,
+    review1: "Sleek design and comfortable fit, perfect for all-day wear.",
+    review2: "Stylish and versatile, these shoes are a wardrobe essential.",
   },
   {
     id: 2,
-    name: "NIKE Running Shoes AIR MAX , All Black",
-    image: p2_img,
-    new_price: 8500.0,
-    old_price: 12000.0,
+    name: "NIKE Running Shoes AIR MAX",
+    category: "Women",
+    image: w2_img,
+    new_price: 16.25,
+    old_price: 24.26,
+    review1: "Impressive cushioning and support, ideal for long walks.",
+    review2: "Elegant and classy, these shoes make a statement.",
   },
   {
     id: 3,
-    name: "NIKE AIR Running Shoes , Blue , White Sole",
-    image: p3_img,
-    new_price: 6000.0,
-    old_price: 10000.0,
+    name: "NIKE AIR Running Shoes",
+    category: "Women",
+    image: w3_img,
+    new_price: 24.91,
+    old_price: 28.05,
+    review1: "Durable and robust, great for outdoor activities.",
+    review2: "Modern look with a snug fit, very trendy.",
+  },
+  {
+    id: 4,
+    name: "NIKE Running Shoes AIR MAX",
+    category: "Women",
+    image: w4_img,
+    new_price: 25.88,
+    old_price: 27.05,
+    review1: "Breathable material keeps feet cool and dry.",
+    review2: "Lightweight and flexible, excellent for daily use.",
+  },
+  {
+    id: 5,
+    name: "NIKE Running Shoes AIR MAX",
+    category: "Women",
+    image: w5_img,
+    new_price: 29.18,
+    old_price: 29.64,
+    review1: "Chic and comfortable, perfect for casual outings.",
+    review2: "High-quality construction ensures long-lasting wear.",
+  },
+  {
+    id: 6,
+    name: "NIKE AIR Running Shoes",
+    category: "Women",
+    image: w6_img,
+    new_price: 21.91,
+    old_price: 26.45,
+    review1: "Fantastic arch support, perfect for active days.",
+    review2: "Stylish design meets exceptional comfort.",
+  },
+  {
+    id: 7,
+    name: "NIKE Running Shoes",
+    category: "Women",
+    image: w7_img,
+    new_price: 18.4,
+    old_price: 27.61,
+    review1: "Versatile style that pairs well with any outfit.",
+    review2: "Superior grip and stability, great for various terrains.",
+  },
+  {
+    id: 8,
+    name: "NIKE AIR Running Shoes",
+    category: "Women",
+    image: w8_img,
+    new_price: 19.08,
+    old_price: 19.53,
+    review1: "Premium materials offer excellent durability.",
+    review2: "Sophisticated look with a plush feel.",
+  },
+  {
+    id: 9,
+    name: "NIKE Running Shoes",
+    category: "Women",
+    image: w9_img,
+    new_price: 22.66,
+    old_price: 26.11,
+    review1: "Excellent for both casual and formal occasions.",
+    review2: "Ergonomic design provides outstanding comfort.",
+  },
+  {
+    id: 10,
+    name: "NIKE Running Shoes",
+    category: "Women",
+    image: w10_img,
+    new_price: 17.33,
+    old_price: 26.42,
+    review1: "Trendy and fashionable, these shoes turn heads.",
+    review2: "Comfortable and supportive, great for long wear.",
+  },
+  {
+    id: 11,
+    name: "Item 11",
+    category: "Women",
+    image: w11_img,
+    new_price: 23.36,
+    old_price: 26.14,
+    review1: "Perfect blend of style and practicality.",
+    review2: "Light and breathable, ideal for summer.",
+  },
+  {
+    id: 12,
+    name: "Item 12",
+    category: "Women",
+    image: w12_img,
+    new_price: 19.33,
+    old_price: 23.95,
+    review1: "Classic look with modern comfort features.",
+    review2: "Well-crafted and stylish, a great addition to any wardrobe.",
+  },
+  {
+    id: 13,
+    name: "Item 13",
+    category: "Women",
+    image: w13_img,
+    new_price: 16.7,
+    old_price: 17.52,
+    review1: "Reliable and sturdy, perfect for everyday use.",
+    review2: "Sleek design with exceptional comfort.",
+  },
+  {
+    id: 14,
+    name: "Item 14",
+    category: "Women",
+    image: w14_img,
+    new_price: 18.71,
+    old_price: 27.5,
+    review1: "Innovative design that stands out.",
+    review2: "Supportive and comfortable, great for active lifestyles.",
+  },
+  {
+    id: 15,
+    name: "Item 15",
+    category: "Women",
+    image: w15_img,
+    new_price: 19.58,
+    old_price: 24.28,
+    review1: "Elegant design suitable for various occasions.",
+    review2: "Comfort meets style in these must-have shoes.",
+  },
+  {
+    id: 16,
+    name: "Item 16",
+    category: "Women",
+    image: w16_img,
+    new_price: 26.96,
+    old_price: 28.3,
+    review1: "Robust and durable, ideal for outdoor adventures.",
+    review2: "Sophisticated and comfortable, perfect for work or play.",
+  },
+  {
+    id: 17,
+    name: "Item 17",
+    category: "Women",
+    image: w17_img,
+    new_price: 24.61,
+    old_price: 24.72,
+    review1: "Stylish and comfortable, perfect for all-day wear.",
+    review2: "High-quality materials ensure long-lasting use.",
+  },
+  {
+    id: 18,
+    name: "Item 18",
+    category: "Women",
+    image: w18_img,
+    new_price: 18.51,
+    old_price: 28.29,
+    review1: "Trendy look with a comfortable fit.",
+    review2: "Perfect for both casual and formal settings.",
+  },
+  {
+    id: 19,
+    name: "Item 19",
+    category: "Women",
+    image: w19_img,
+    new_price: 17.14,
+    old_price: 23.59,
+    review1: "Classic style with modern comfort.",
+    review2: "Durable and stylish, these shoes are a great investment.",
+  },
+  {
+    id: 20,
+    name: "Item 20",
+    category: "Women",
+    image: w20_img,
+    new_price: 27.19,
+    old_price: 29.57,
+    review1: "Elegant design with exceptional comfort.",
+    review2: "Versatile and durable, perfect for any occasion.",
   },
 ];
 
-export default data_product;
+let data_product_men = [
+  {
+    id: 1,
+    name: "NIKE Running Shoes",
+    category: "Women",
+    image: m1_img,
+    new_price: 26.23,
+    old_price: 27.54,
+    review1: "Sleek design and comfortable fit, perfect for all-day wear.",
+    review2: "Stylish and versatile, these shoes are a wardrobe essential.",
+  },
+  {
+    id: 2,
+    name: "NIKE Running Shoes AIR MAX",
+    category: "Women",
+    image: m2_img,
+    new_price: 16.25,
+    old_price: 24.26,
+    review1: "Impressive cushioning and support, ideal for long walks.",
+    review2: "Elegant and classy, these shoes make a statement.",
+  },
+  {
+    id: 3,
+    name: "NIKE AIR Running Shoes",
+    category: "Women",
+    image: m3_img,
+    new_price: 24.91,
+    old_price: 28.05,
+    review1: "Durable and robust, great for outdoor activities.",
+    review2: "Modern look with a snug fit, very trendy.",
+  },
+  {
+    id: 4,
+    name: "Item 4",
+    category: "Women",
+    image: m4_img,
+    new_price: 25.88,
+    old_price: 27.05,
+    review1: "Breathable material keeps feet cool and dry.",
+    review2: "Lightweight and flexible, excellent for daily use.",
+  },
+  {
+    id: 5,
+    name: "Item 5",
+    category: "Women",
+    image: m5_img,
+    new_price: 29.18,
+    old_price: 29.64,
+    review1: "Chic and comfortable, perfect for casual outings.",
+    review2: "High-quality construction ensures long-lasting wear.",
+  },
+  {
+    id: 6,
+    name: "Item 6",
+    category: "Women",
+    image: m6_img,
+    new_price: 21.91,
+    old_price: 26.45,
+    review1: "Fantastic arch support, perfect for active days.",
+    review2: "Stylish design meets exceptional comfort.",
+  },
+  {
+    id: 7,
+    name: "Item 7",
+    category: "Women",
+    image: m7_img,
+    new_price: 18.4,
+    old_price: 27.61,
+    review1: "Versatile style that pairs well with any outfit.",
+    review2: "Superior grip and stability, great for various terrains.",
+  },
+  {
+    id: 8,
+    name: "Item 8",
+    category: "Women",
+    image: m8_img,
+    new_price: 19.08,
+    old_price: 19.53,
+    review1: "Premium materials offer excellent durability.",
+    review2: "Sophisticated look with a plush feel.",
+  },
+  {
+    id: 9,
+    name: "Item 9",
+    category: "Women",
+    image: m9_img,
+    new_price: 22.66,
+    old_price: 26.11,
+    review1: "Excellent for both casual and formal occasions.",
+    review2: "Ergonomic design provides outstanding comfort.",
+  },
+  {
+    id: 10,
+    name: "Item 10",
+    category: "Women",
+    image: m10_img,
+    new_price: 17.33,
+    old_price: 26.42,
+    review1: "Trendy and fashionable, these shoes turn heads.",
+    review2: "Comfortable and supportive, great for long wear.",
+  },
+  {
+    id: 11,
+    name: "Item 11",
+    category: "Women",
+    image: m11_img,
+    new_price: 23.36,
+    old_price: 26.14,
+    review1: "Perfect blend of style and practicality.",
+    review2: "Light and breathable, ideal for summer.",
+  },
+  {
+    id: 12,
+    name: "Item 12",
+    category: "Women",
+    image: m12_img,
+    new_price: 19.33,
+    old_price: 23.95,
+    review1: "Classic look with modern comfort features.",
+    review2: "Well-crafted and stylish, a great addition to any wardrobe.",
+  },
+  {
+    id: 13,
+    name: "Item 13",
+    category: "Women",
+    image: m13_img,
+    new_price: 16.7,
+    old_price: 17.52,
+    review1: "Reliable and sturdy, perfect for everyday use.",
+    review2: "Sleek design with exceptional comfort.",
+  },
+  {
+    id: 14,
+    name: "Item 14",
+    category: "Women",
+    image: m14_img,
+    new_price: 18.71,
+    old_price: 27.5,
+    review1: "Innovative design that stands out.",
+    review2: "Supportive and comfortable, great for active lifestyles.",
+  },
+  {
+    id: 15,
+    name: "Item 15",
+    category: "Women",
+    image: m15_img,
+    new_price: 19.58,
+    old_price: 24.28,
+    review1: "Elegant design suitable for various occasions.",
+    review2: "Comfort meets style in these must-have shoes.",
+  },
+  {
+    id: 16,
+    name: "Item 16",
+    category: "Women",
+    image: m16_img,
+    new_price: 26.96,
+    old_price: 28.3,
+    review1: "Robust and durable, ideal for outdoor adventures.",
+    review2: "Sophisticated and comfortable, perfect for work or play.",
+  },
+  {
+    id: 17,
+    name: "Item 17",
+    category: "Women",
+    image: m17_img,
+    new_price: 24.61,
+    old_price: 24.72,
+    review1: "Stylish and comfortable, perfect for all-day wear.",
+    review2: "High-quality materials ensure long-lasting use.",
+  },
+  {
+    id: 18,
+    name: "Item 18",
+    category: "Women",
+    image: m18_img,
+    new_price: 18.51,
+    old_price: 28.29,
+    review1: "Trendy look with a comfortable fit.",
+    review2: "Perfect for both casual and formal settings.",
+  },
+  {
+    id: 19,
+    name: "Item 19",
+    category: "Women",
+    image: m19_img,
+    new_price: 17.14,
+    old_price: 23.59,
+    review1: "Classic style with modern comfort.",
+    review2: "Durable and stylish, these shoes are a great investment.",
+  },
+  {
+    id: 20,
+    name: "Item 20",
+    category: "Women",
+    image: m20_img,
+    new_price: 27.19,
+    old_price: 29.57,
+    review1: "Elegant design with exceptional comfort.",
+    review2: "Versatile and durable, perfect for any occasion.",
+  },
+];
+
+let data_product_kids = [
+  {
+    id: 1,
+    name: "NIKE Running Shoes",
+    category: "Women",
+    image: k1_img,
+    new_price: 26.23,
+    old_price: 27.54,
+    review1: "Sleek design and comfortable fit, perfect for all-day wear.",
+    review2: "Stylish and versatile, these shoes are a wardrobe essential.",
+  },
+  {
+    id: 2,
+    name: "NIKE Running Shoes AIR MAX",
+    category: "Women",
+    image: k2_img,
+    new_price: 16.25,
+    old_price: 24.26,
+    review1: "Impressive cushioning and support, ideal for long walks.",
+    review2: "Elegant and classy, these shoes make a statement.",
+  },
+  {
+    id: 3,
+    name: "NIKE AIR Running Shoes",
+    category: "Women",
+    image: k3_img,
+    new_price: 24.91,
+    old_price: 28.05,
+    review1: "Durable and robust, great for outdoor activities.",
+    review2: "Modern look with a snug fit, very trendy.",
+  },
+  {
+    id: 4,
+    name: "Item 4",
+    category: "Women",
+    image: k4_img,
+    new_price: 25.88,
+    old_price: 27.05,
+    review1: "Breathable material keeps feet cool and dry.",
+    review2: "Lightweight and flexible, excellent for daily use.",
+  },
+  {
+    id: 5,
+    name: "Item 5",
+    category: "Women",
+    image: k5_img,
+    new_price: 29.18,
+    old_price: 29.64,
+    review1: "Chic and comfortable, perfect for casual outings.",
+    review2: "High-quality construction ensures long-lasting wear.",
+  },
+  {
+    id: 6,
+    name: "Item 6",
+    category: "Women",
+    image: k6_img,
+    new_price: 21.91,
+    old_price: 26.45,
+    review1: "Fantastic arch support, perfect for active days.",
+    review2: "Stylish design meets exceptional comfort.",
+  },
+  {
+    id: 7,
+    name: "Item 7",
+    category: "Women",
+    image: k7_img,
+    new_price: 18.4,
+    old_price: 27.61,
+    review1: "Versatile style that pairs well with any outfit.",
+    review2: "Superior grip and stability, great for various terrains.",
+  },
+  {
+    id: 8,
+    name: "Item 8",
+    category: "Women",
+    image: k8_img,
+    new_price: 19.08,
+    old_price: 19.53,
+    review1: "Premium materials offer excellent durability.",
+    review2: "Sophisticated look with a plush feel.",
+  },
+  {
+    id: 9,
+    name: "Item 9",
+    category: "Women",
+    image: k9_img,
+    new_price: 22.66,
+    old_price: 26.11,
+    review1: "Excellent for both casual and formal occasions.",
+    review2: "Ergonomic design provides outstanding comfort.",
+  },
+  {
+    id: 10,
+    name: "Item 10",
+    category: "Women",
+    image: k10_img,
+    new_price: 17.33,
+    old_price: 26.42,
+    review1: "Trendy and fashionable, these shoes turn heads.",
+    review2: "Comfortable and supportive, great for long wear.",
+  },
+  {
+    id: 11,
+    name: "Item 11",
+    category: "Women",
+    image: k11_img,
+    new_price: 23.36,
+    old_price: 26.14,
+    review1: "Perfect blend of style and practicality.",
+    review2: "Light and breathable, ideal for summer.",
+  },
+  {
+    id: 12,
+    name: "Item 12",
+    category: "Women",
+    image: k12_img,
+    new_price: 19.33,
+    old_price: 23.95,
+    review1: "Classic look with modern comfort features.",
+    review2: "Well-crafted and stylish, a great addition to any wardrobe.",
+  },
+  {
+    id: 13,
+    name: "Item 13",
+    category: "Women",
+    image: k13_img,
+    new_price: 16.7,
+    old_price: 17.52,
+    review1: "Reliable and sturdy, perfect for everyday use.",
+    review2: "Sleek design with exceptional comfort.",
+  },
+  {
+    id: 14,
+    name: "Item 14",
+    category: "Women",
+    image: k14_img,
+    new_price: 18.71,
+    old_price: 27.5,
+    review1: "Innovative design that stands out.",
+    review2: "Supportive and comfortable, great for active lifestyles.",
+  },
+  {
+    id: 15,
+    name: "Item 15",
+    category: "Women",
+    image: k15_img,
+    new_price: 19.58,
+    old_price: 24.28,
+    review1: "Elegant design suitable for various occasions.",
+    review2: "Comfort meets style in these must-have shoes.",
+  },
+  {
+    id: 16,
+    name: "Item 16",
+    category: "Women",
+    image: k16_img,
+    new_price: 26.96,
+    old_price: 28.3,
+    review1: "Robust and durable, ideal for outdoor adventures.",
+    review2: "Sophisticated and comfortable, perfect for work or play.",
+  },
+  {
+    id: 17,
+    name: "Item 17",
+    category: "Women",
+    image: k17_img,
+    new_price: 24.61,
+    old_price: 24.72,
+    review1: "Stylish and comfortable, perfect for all-day wear.",
+    review2: "High-quality materials ensure long-lasting use.",
+  },
+  {
+    id: 18,
+    name: "Item 18",
+    category: "Women",
+    image: k18_img,
+    new_price: 18.51,
+    old_price: 28.29,
+    review1: "Trendy look with a comfortable fit.",
+    review2: "Perfect for both casual and formal settings.",
+  },
+  {
+    id: 19,
+    name: "Item 19",
+    category: "Women",
+    image: k19_img,
+    new_price: 17.14,
+    old_price: 23.59,
+    review1: "Classic style with modern comfort.",
+    review2: "Durable and stylish, these shoes are a great investment.",
+  },
+  {
+    id: 20,
+    name: "Item 20",
+    category: "Women",
+    image: k20_img,
+    new_price: 27.19,
+    old_price: 29.57,
+    review1: "Elegant design with exceptional comfort.",
+    review2: "Versatile and durable, perfect for any occasion.",
+  },
+];
+
+export { data_product_women, data_product_men, data_product_kids };
