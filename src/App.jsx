@@ -26,7 +26,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignUp />} />
-          <Route path="/ContactMe" element={<ContactMe />} />
+          <Route path="/contactMe" element={<ContactMe />} />
         </Routes>
         <Footer />
       </BrowserRouter>

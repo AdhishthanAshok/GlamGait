@@ -43,13 +43,13 @@ export default function Navbar() {
                   {/* Mobile menu button */}
                   <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <div className="flex flex-shrink-0 items-center">
-                      <a href="/">
+                      <Link href="/">
                         <img
                           className="h-10 w-auto"
                           src={logo_img}
                           alt="Your Company"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* Navigation links */}

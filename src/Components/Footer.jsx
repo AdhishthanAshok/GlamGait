@@ -1,6 +1,7 @@
 import React from "react";
 // import "./Footer.css";
 import logo_img from "./assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,12 +9,12 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-around">
           <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img src={logo_img} className="h-8 me-3" alt="FlowBite Logo" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 GlamGait
               </span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -23,7 +24,7 @@ const Footer = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://flowbite.com/"
+                    href="https://react.dev/"
                     className="hover:underline"
                     target="_blank"
                   >
@@ -72,13 +73,13 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a
-                    href="/ContactMe"
+                  <Link
+                    to="/ContactMe"
                     className="hover:underline "
                     target="_blank"
                   >
                     Send Mail
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -97,7 +98,7 @@ const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <p className="mr-5 text-gray-800 dark:text-gray-50 text-xs font-bold">
             {" "}
-            Created with 💖 by Adhishthan Ashok
+            Created by Adhishthan Ashok
           </p>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a
