@@ -1,5 +1,5 @@
 import React from "react";
-import { data_product_women } from "./assets/data.js";
+import data_product from "./assets/data.js";
 import Item from "./Item/Item.jsx";
 
 const Popular = () => {
@@ -9,7 +9,7 @@ const Popular = () => {
         TRENDING FOOTWEAR
       </h1>
       <div className="flex flex-nowrap overflow-x-auto scrollbar-hide w-full h-auto px-4 mt-2 ">
-        {data_product_women.slice(0, 10).map((item, i) => (
+        {data_product.slice(0, 10).map((item, i) => (
           <Item
             key={i}
             id={item.id}

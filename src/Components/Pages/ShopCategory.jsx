@@ -1,23 +1,19 @@
 import React, { useState } from "react";
 import Item from "../Item/Item.jsx";
-import {
-  data_product_women,
-  data_product_men,
-  data_product_kids,
-} from "../assets/data.js";
+import data_product from "../assets/data.js";
 
 const ShopCategory = ({ category }) => {
   let products = [];
 
   switch (category) {
     case "women":
-      products = data_product_women;
+      products = data_product.filter((product) => product.category === "Women");
       break;
     case "men":
-      products = data_product_men;
+      products = data_product.filter((product) => product.category === "Men");
       break;
     case "kids":
-      products = data_product_kids;
+      products = data_product.filter((product) => product.category === "Kids");
       break;
     default:
       // Handle default case or error
@@ -41,10 +37,11 @@ const ShopCategory = ({ category }) => {
           Popular in {category}
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center hover:border-blue-400 dark:hover:border-blue-400">
-          {products.slice(0, visible).map((item, i) => (
+          {products.slice(0, visible).map((item) => (
             <Item
-              key={i}
+              key={item.id} // Ensure a unique key, preferably the product ID
               id={item.id}
+              category={category}
               name={item.name}
               image={item.image}
               old_price={item.old_price}
