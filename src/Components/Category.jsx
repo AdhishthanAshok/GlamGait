@@ -9,7 +9,7 @@ const Category = () => {
     <div className="flex flex-col md:flex-col text-center bg-gray-300 dark:bg-gray-900">
       <p className="py-5 text-4xl dark:text-white">CATEGORIES</p>
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center pb-5 tracking-wider">
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700  mx-1">
           <img className="rounded-t-lg" src={w_img} alt="" />
           <div className="p-5">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -42,7 +42,7 @@ const Category = () => {
             </Link>
           </div>
         </div>
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-1">
           <img className="rounded-t-lg" src={k_img} alt="" />
           <div className="p-5">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -75,7 +75,7 @@ const Category = () => {
             </Link>
           </div>
         </div>
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-1">
           <img className="rounded-t-lg" src={m_img} alt="" />
           <div className="p-5">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

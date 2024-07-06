@@ -158,9 +158,9 @@ export default function Navbar() {
                     onClick={() => setMenu(item.name)}
                     className={classNames(
                       menu === item.name
-                        ? "bg-gray-900 text-white"
-                        : "text-black hover:bg-gray-700 hover:text-white",
-                      "block rounded-md px-3 py-2 text-base font-medium"
+                        ? "bg-gray-900 text-gray-50 sm:dark:text-gray-50 dark:bg-gray-800 dark:text-gray-50"
+                        : "text-gray-600 hover:bg-gray-700 hover:text-gray-400",
+                      "block rounded-md px-3 py-2 text-base font-medium dark:text-gray-400"
                     )}
                     aria-current={item.current ? "page" : undefined}
                   >

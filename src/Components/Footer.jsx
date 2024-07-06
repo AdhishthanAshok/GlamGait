@@ -24,11 +24,11 @@ const Footer = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://react.dev/"
+                    href="https://shorturl.at/0gnVZ"
                     className="hover:underline"
                     target="_blank"
                   >
-                    ReactJS
+                    MERN Stack
                   </a>
                 </li>
                 <li>
@@ -73,21 +73,17 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <Link
-                    to="/contactMe"
-                    className="hover:underline "
-                    target="_blank"
-                  >
+                  <Link to="/contactMe" className="hover:underline ">
                     Send Mail
                   </Link>
                 </li>
-                <li>
+                <li className="mb-4">
                   <a
-                    href="https://www.linkedin.com/in/adhishthanashok/"
+                    href="https://wa.me/9068287133"
                     className="hover:underline"
                     target="_blank"
                   >
-                    LinkedIn
+                    WhatsApp
                   </a>
                 </li>
               </ul>
