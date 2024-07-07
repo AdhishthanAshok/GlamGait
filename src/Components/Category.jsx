@@ -5,6 +5,9 @@ import k_img from "./assets/Kid_category.jpg";
 import { Link } from "react-router-dom";
 
 const Category = () => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="flex flex-col md:flex-col text-center bg-gray-300 dark:bg-gray-900">
       <p className="py-5 text-4xl dark:text-white">CATEGORIES</p>
@@ -22,6 +25,7 @@ const Category = () => {
             <Link
               to="/womens"
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              onClick={handleClick}
             >
               SHOP NOW
               <svg
@@ -55,8 +59,9 @@ const Category = () => {
             <Link
               to="/kids"
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              onClick={handleClick}
             >
-              Read more
+              SHOP NOW
               <svg
                 className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                 aria-hidden="true"
@@ -88,6 +93,7 @@ const Category = () => {
             <Link
               to="/mens"
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              onClick={handleClick}
             >
               SHOP NOW
               <svg

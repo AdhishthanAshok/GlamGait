@@ -6,6 +6,7 @@ const Product = () => {
   const { data_product } = useContext(ShopContext);
   const { productId } = useParams();
   const product = data_product.find((e) => e.id === Number(productId));
+  const { addToCart } = useContext(ShopContext);
 
   if (!product) {
     return <div>Product not found</div>;
@@ -37,11 +38,11 @@ const Product = () => {
             </div>
 
             <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
-              <a
-                href="#"
-                title=""
-                className="text-gray-50 dark:text-gray-50 mt-4 sm:mt-0 bg-green-500 hover:bg-primary-800 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 flex items-center justify-center"
-                role="button"
+              <button
+                className="text-gray-50 dark:text-gray-50 mt-4 sm:mt-0 bg-green-500 hover:bg-green-600 font-medium rounded-lg text-sm px-5 py-2.5 flex items-center justify-center"
+                onClick={() => {
+                  addToCart(product.id);
+                }}
               >
                 <svg
                   className="w-5 h-5 -ms-2 me-2"
@@ -61,7 +62,7 @@ const Product = () => {
                   />
                 </svg>
                 Add to cart
-              </a>
+              </button>
             </div>
 
             <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
