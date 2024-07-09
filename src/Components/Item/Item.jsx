@@ -20,10 +20,10 @@ const Item = (props) => {
       </p>
       <div className="flex justify-center items-center">
         <div className="text-gray-800  text-sm sm:text-base md:text-lg font-semibold">
-          ₹{props.new_price}
+          ${props.new_price}
         </div>
         <div className="text-gray-400 text-sm sm:text-base md:text-lg font-medium line-through ml-2">
-          ₹{props.old_price}
+          ${props.old_price}
         </div>
       </div>
     </div>
