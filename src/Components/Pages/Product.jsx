@@ -30,10 +30,10 @@ const Product = () => {
             </p>
             <div className="mt-4 sm:items-center sm:gap-4 sm:flex">
               <p className="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
-                ${product.new_price}
+                ₹{product.new_price}
               </p>
               <p className="text-xl text-gray-500 line-through sm:text-2xl dark:text-gray-400 ml-4">
-                ${product.old_price}
+                ₹{product.old_price}
               </p>
             </div>
 

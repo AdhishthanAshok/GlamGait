@@ -16,6 +16,7 @@ const Cart = () => {
     (acc, curr) => acc + curr,
     0
   );
+  const storePickup = 50;
 
   return (
     <div>
@@ -37,7 +38,7 @@ const Cart = () => {
                       >
                         <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
                           <Link
-                            to={`/product/${product.id}`}
+                            to={`/product/₹{product.id}`}
                             className="shrink-0 md:order-1"
                           >
                             <img
@@ -117,7 +118,7 @@ const Cart = () => {
                             </div>
                             <div className="text-end md:order-4 md:w-32">
                               <p className="text-base font-bold text-gray-900 dark:text-white">
-                                ${product.new_price * cartItems[product.id]}
+                                ₹{product.new_price * cartItems[product.id]}
                               </p>
                             </div>
                           </div>
@@ -199,7 +200,7 @@ const Cart = () => {
                         Original price
                       </dt>
                       <dd className="text-base font-medium text-gray-900 dark:text-white">
-                        ${getTotalCartAmount()};
+                        ₹{getTotalCartAmount()}
                       </dd>
                     </dl>
 
@@ -217,7 +218,7 @@ const Cart = () => {
                         Store Pickup
                       </dt>
                       <dd className="text-base font-medium text-gray-900 dark:text-white">
-                        0
+                        {storePickup}
                       </dd>
                     </dl>
 
@@ -236,7 +237,7 @@ const Cart = () => {
                       Total
                     </dt>
                     <dd className="text-base font-bold text-gray-900 dark:text-white">
-                      ${getTotalCartAmount()};
+                      ₹{Number(getTotalCartAmount()) + Number(storePickup)}
                     </dd>
                   </dl>
                 </div>
@@ -255,7 +256,7 @@ const Cart = () => {
                   </span>
                   <Link
                     to="/"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline dark:text-primary-500"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 hover:underline dark:text-gray-300"
                   >
                     Continue Shopping
                     <svg

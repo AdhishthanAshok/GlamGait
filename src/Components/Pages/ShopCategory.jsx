@@ -51,7 +51,7 @@ const ShopCategory = ({ category }) => {
         </div>
         <div className="text-center my-4 flex justify-center space-x-4">
           <button
-            className={`text-lg font-medium py-2 px-6 rounded-md shadow-md ${
+            className={`text-lg font-medium py-2 px-6 rounded-md shadow-md ₹{
               visible < products.length
                 ? "bg-blue-500 hover:bg-blue-600 text-white"
                 : "bg-gray-500 text-gray-300 cursor-not-allowed"
@@ -62,7 +62,7 @@ const ShopCategory = ({ category }) => {
             Show More
           </button>
           <button
-            className={`text-lg font-medium py-2 px-6 rounded-md shadow-md ${
+            className={`text-lg font-medium py-2 px-6 rounded-md shadow-md ₹{
               visible > 8
                 ? "bg-red-500 hover:bg-red-600 text-white"
                 : "bg-gray-500 text-gray-300 cursor-not-allowed"

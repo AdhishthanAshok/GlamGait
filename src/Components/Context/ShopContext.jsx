@@ -45,7 +45,7 @@ const ShopContextProvider = (props) => {
       }
     }
 
-    return totalAmount.toFixed(2);
+    return totalAmount;
   };
   const contextValue = {
     data_product,
