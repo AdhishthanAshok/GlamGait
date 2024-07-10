@@ -1,16 +1,35 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 // import "./Footer.css";
-import logo_img from "./assets/logo.png";
+import logo_img_dark from "./assets/logo_dark.jpg";
+import logo_img_light from "./assets/logo_light.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="bg-white dark:bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-around">
           <div className="mb-6 md:mb-0">
-            <Link to="/" className="flex items-center">
-              <img src={logo_img} className="h-8 me-3" alt="FlowBite Logo" />
+            <Link to="/" className="flex items-center " onClick={handleClick}>
+              <img
+                className="h-10 w-auto"
+                src={darkMode ? logo_img_dark : logo_img_light}
+                alt="Your Company"
+              />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 GlamGait
               </span>

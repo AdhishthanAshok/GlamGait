@@ -1,9 +1,10 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-import logo_img from "./assets/logo.png";
+import logo_img_dark from "./assets/logo_dark.jpg";
+import logo_img_light from "./assets/logo_light.png";
 import profile_img from "./assets/profile_icon.png";
 import Theme from "./Theme.jsx";
 import CartButton from "./Pages/CartButton.jsx";
@@ -21,6 +22,15 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [menu, setMenu] = useState("Shop");
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 h-1/5">
@@ -47,7 +57,7 @@ export default function Navbar() {
                       <Link to="/">
                         <img
                           className="h-10 w-auto"
-                          src={logo_img}
+                          src={darkMode ? logo_img_dark : logo_img_light}
                           alt="Your Company"
                         />
                       </Link>
