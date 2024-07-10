@@ -34,7 +34,7 @@ const ContactMe = () => {
           setPopupMessage("Message sent successfully!");
         },
         (error) => {
-          setPopupMessage(`Failed to send message: ₹{error.text}`);
+          setPopupMessage(`Failed to send message: ${error.text}`);
         }
       );
   };

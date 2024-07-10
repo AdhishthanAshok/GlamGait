@@ -16,7 +16,14 @@ const Cart = () => {
     (acc, curr) => acc + curr,
     0
   );
-  const storePickup = 50;
+  const totalCartAmount = getTotalCartAmount();
+  const savings = (totalCartAmount * 0.1).toFixed(2);
+  const tax = (totalCartAmount * 0.06).toFixed(2);
+  const finalTotal = (
+    totalCartAmount -
+    parseFloat(savings) +
+    parseFloat(tax)
+  ).toFixed(2);
 
   return (
     <div>
@@ -38,7 +45,7 @@ const Cart = () => {
                       >
                         <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
                           <Link
-                            to={`/product/₹{product.id}`}
+                            to={`/product/${product.id}`}
                             className="shrink-0 md:order-1"
                           >
                             <img
@@ -200,34 +207,25 @@ const Cart = () => {
                         Original price
                       </dt>
                       <dd className="text-base font-medium text-gray-900 dark:text-white">
-                        ₹{getTotalCartAmount()}
+                        ₹{totalCartAmount}
                       </dd>
                     </dl>
 
                     <dl className="flex items-center justify-between gap-4">
                       <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                        Savings
+                        Savings <span className="text-green-500 ">(10%)</span>
                       </dt>
                       <dd className="text-base font-medium text-green-600">
-                        0
+                        ₹{savings}
                       </dd>
                     </dl>
 
                     <dl className="flex items-center justify-between gap-4">
                       <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                        Store Pickup
+                        Tax <span className="text-red-500 ">(6%)</span>
                       </dt>
-                      <dd className="text-base font-medium text-gray-900 dark:text-white">
-                        {storePickup}
-                      </dd>
-                    </dl>
-
-                    <dl className="flex items-center justify-between gap-4">
-                      <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                        Tax
-                      </dt>
-                      <dd className="text-base font-medium text-gray-900 dark:text-white">
-                        0
+                      <dd className="text-base font-medium text-red-500 dark:text-red-500 ">
+                        ₹{tax}
                       </dd>
                     </dl>
                   </div>
@@ -237,7 +235,7 @@ const Cart = () => {
                       Total
                     </dt>
                     <dd className="text-base font-bold text-gray-900 dark:text-white">
-                      ₹{Number(getTotalCartAmount()) + Number(storePickup)}
+                      ₹{finalTotal}
                     </dd>
                   </dl>
                 </div>
