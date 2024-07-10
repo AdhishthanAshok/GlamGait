@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../Context/ShopContext";
 import { Link } from "react-router-dom";
+import emptyCart from "../assets/emptyCart.png";
 
 const Cart = () => {
   const {
@@ -178,7 +179,7 @@ const Cart = () => {
                     </p>
                     <div className="space-y-4 p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
                       <img
-                        src="https://cdn-icons-png.flaticon.com/512/2762/2762885.png"
+                        src={emptyCart}
                         alt="Empty Cart"
                         className="mx-auto w-32 h-32"
                       />
