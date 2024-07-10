@@ -599,6 +599,16 @@ let data_product = [
     review1: "Sample review 1 for Kids product 20",
     review2: "Sample review 2 for Kids product 20",
   },
+  {
+    id: 61,
+    name: "Men's Leather Boot",
+    category: "Men",
+    image: "/Offer1.jpg",
+    new_price: 5999,
+    old_price: 11999,
+    review1: "Best Leather Shoe to buy at this price!!",
+    review2: "Highly Recommended, Comfortable, reliable. Go for it. ",
+  },
 ];
 
 export default data_product;

@@ -24,7 +24,7 @@ const Product = () => {
       <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0">
         <div className="flex flex-col items-center md:flex-row md:justify-around ">
           <img
-            className="w-56 rounded-lg"
+            className="w-56 rounded-lg scale-x transition-transform duration-300 hover:scale-x-[-1]"
             src={product.image}
             alt={product.name}
           />
