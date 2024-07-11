@@ -32,6 +32,8 @@ export default function Navbar() {
     }
   }, [darkMode]);
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div className="bg-gray-50 dark:bg-gray-900 h-1/5">
       <Disclosure as="nav" className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -90,7 +92,6 @@ export default function Navbar() {
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
                     <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="" />
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
@@ -107,32 +108,54 @@ export default function Navbar() {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <Menu.Items className="absolute dark:bg-gray-900 mt-2 w-44 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              to="/profile"
-                              className={classNames(
-                                active ? "bg-gray-200 dark:bg-gray-700" : "",
-                                "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
+                        {isLoggedIn ? (
+                          <>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <Link
+                                  to="/profile"
+                                  className={classNames(
+                                    active
+                                      ? "bg-gray-200 dark:bg-gray-700"
+                                      : "",
+                                    "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
+                                  )}
+                                >
+                                  Your Profile
+                                </Link>
                               )}
-                            >
-                              Your Profile
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              to="/logout"
-                              className={classNames(
-                                active ? "bg-gray-200 dark:bg-gray-700" : "",
-                                "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
+                            </Menu.Item>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <Link
+                                  to="/logout"
+                                  className={classNames(
+                                    active
+                                      ? "bg-gray-200 dark:bg-gray-700"
+                                      : "",
+                                    "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
+                                  )}
+                                >
+                                  Sign out
+                                </Link>
                               )}
-                            >
-                              Sign out
-                            </Link>
-                          )}
-                        </Menu.Item>
+                            </Menu.Item>
+                          </>
+                        ) : (
+                          <Menu.Item>
+                            {({ active }) => (
+                              <Link
+                                to="/login"
+                                className={classNames(
+                                  active ? "bg-gray-200 dark:bg-gray-700" : "",
+                                  "block px-4 py-2 text-sm text-gray-700 dark:text-gray-50"
+                                )}
+                              >
+                                Login
+                              </Link>
+                            )}
+                          </Menu.Item>
+                        )}
                       </Menu.Items>
                     </Transition>
                   </Menu>
