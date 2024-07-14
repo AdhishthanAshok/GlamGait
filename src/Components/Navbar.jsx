@@ -8,6 +8,7 @@ import logo_img_light from "./assets/logo_light.png";
 import profile_img from "./assets/profile_icon.png";
 import Theme from "./Theme.jsx";
 import CartButton from "./Pages/CartButton.jsx";
+import hello_gif from "../Components/assets/hello_gif.gif";
 
 const navigation = [
   { name: "Shop", to: "/", current: true },
@@ -55,12 +56,19 @@ export default function Navbar() {
                 <div className="flex flex-1 items-center justify-between sm:items-stretch sm:justify-between">
                   {/* Mobile menu button */}
                   <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                    <div className="flex flex-shrink-0 items-center">
+                    <div className="flex flex-shrink-0 items-center gap-2">
                       <Link to="/">
                         <img
-                          className="h-10 w-auto"
+                          className="h-10 w-auto hover:scale-125"
                           src={darkMode ? logo_img_dark : logo_img_light}
                           alt="Your Company"
+                        />
+                      </Link>
+                      <Link to="/shoe">
+                        <img
+                          className="h-9 w-9 hover:scale-110 rounded-lg"
+                          src={hello_gif}
+                          alt="Hello Welcome"
                         />
                       </Link>
                     </div>

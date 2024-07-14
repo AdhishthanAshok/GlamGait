@@ -11,6 +11,7 @@ import ForgotPassword from "./Components/Login/ForgotPassword.jsx";
 import Profile from "./Components/Pages/Profile";
 import Footer from "./Components/Footer";
 import ContactMe from "./Components/ContactMe.jsx";
+import Shoe from "./Components/Pages/Shoe.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />
+          <Route path="/shoe" element={<Shoe />} />
           <Route path="/mens" element={<ShopCategory category="men" />} />
           <Route path="/womens" element={<ShopCategory category="women" />} />
           <Route path="/kids" element={<ShopCategory category="kids" />} />
