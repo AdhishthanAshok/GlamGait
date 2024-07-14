@@ -5,8 +5,7 @@ import Shop from "./Components/Pages/Shop";
 import ShopCategory from "./Components/Pages/ShopCategory";
 import Product from "./Components/Pages/Product";
 import Cart from "./Components/Pages/Cart";
-import LoginPage from "./Components/Login/LoginPage";
-import SignupPage from "./Components/Login/SignupPage";
+import LoginSignup from "./Components/Login/LoginSignup.jsx";
 import ForgotPassword from "./Components/Login/ForgotPassword.jsx";
 import Profile from "./Components/Pages/Profile";
 import Footer from "./Components/Footer";
@@ -29,9 +28,7 @@ function App() {
           </Route>
           <Route path="/profile" element={<Profile />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginSignup />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/contactMe" element={<ContactMe />} />
         </Routes>
