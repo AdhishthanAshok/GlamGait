@@ -26,7 +26,7 @@ function Shoe() {
 
   return (
     <div className="h-full py-10 w-full flex flex-col justify-center items-center">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-2">
         {error ? (
           <p className="text-lg col-span-full dark:text-gray-200 ">
             Try After One Hour, Request Queue is Full
@@ -36,7 +36,7 @@ function Shoe() {
             <div key={index} className="overflow-hidden rounded-lg shadow-md">
               <img
                 src={url}
-                className="h-56 w-full object-cover"
+                className="h-56 w-full object-contain"
                 alt={`Shoe ${index}`}
               />
             </div>
